@@ -1,0 +1,39 @@
+/*p {
+    color: red;
+}*/
+
+body {
+    /*background-image: url(../img/bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;*/
+}
+
+.destacado {
+    color: rgb(5, 6, 34);
+    font-size: 16px;
+    font-family: Oswald, Arial, serif;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    /*letter-spacing: 20px;*/
+    border-width: 5px;
+    border-style: black;
+    border-color: rgb(175, 140, 46) ;
+    border-radius: 10px;
+
+}
+
+.texto-rojo {
+    color: rgb(255, 255, 255);
+}   
+
+.fondo-azul {
+    background-color: rgb(87, 24, 59);
+}
+
+#encabezado-2 {
+    background-color: rgb(203, 203, 122);
+    color: rgb(69, 43, 19);
+}
