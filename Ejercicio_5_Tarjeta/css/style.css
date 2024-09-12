@@ -1,0 +1,41 @@
+body {
+    /*Permiten que no haya espacios a los lados de la página. Da la impresión de que el contenido abarca toda
+     la pantalla*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+.box{
+    width: 300px;
+    height: 500px;
+    background-color: rgb(219, 213, 43);
+    border: 5px solid rgb(95, 7, 7);
+    color: rgb(0, 0, 0);
+}
+
+.box-padding {
+    padding: 15px 50px;
+}
+
+.box-margin {
+    margin: 15px;
+}
+
+.photo {
+    width: 300px;
+    height: 200px; /*Se establece que tendrá un alto de 40 pixeles (como es un header queremos que siempre mida lo mismo de alto)*/
+    
+}
+
+.contact-link {
+    width: 25%;
+    text-align: center;
+    line-height: 40px; /*Modificamos la altura de la línea para que los enlaces se coloquen en el centro (verticalmente).*/
+}
+
+.nav-link {
+    color: rgb(138, 11, 11); /*Modificamos el color del enlace*/
+    font-size: 16px;
+}
