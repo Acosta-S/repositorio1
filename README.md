@@ -12,5 +12,7 @@ Codigos de tareas por Jose Alberto Acosta Salgado
 10. https://acosta-s.github.io/repositorio1/Ejercicio_5_Tarjeta/index.html
 11. [06: Ejercicio#6](/Ejercicio_6/index.html)
 12. https://acosta-s.github.io/repositorio1/Ejercicio_6/index.html
+13. [07: Ejercicio#7](/Ejercicio_7/index.html)
+14. https://acosta-s.github.io/repositorio1/Ejercicio_7/index.html
 
 
