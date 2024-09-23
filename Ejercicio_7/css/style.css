@@ -1,0 +1,149 @@
+
+.destacado {
+    color: rgb(5, 6, 34);
+    font-size: 16px;
+    font-family: Oswald, Arial, serif;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+    /*letter-spacing: 20px;*/
+    border-width: 5px;
+    border-style: black;
+    border-color: rgb(175, 140, 46) ;
+    border-radius: 10px;
+    padding: 1%;
+    border: 2px solid light-gray
+
+}
+
+.texto-rojo {
+    color: rgb(255, 255, 255);
+}   
+
+.fondo-azul {
+    background-color: rgb(87, 24, 59);
+}
+
+#encabezado-2 {
+    background-color: rgb(203, 203, 122);
+    color: rgb(69, 43, 19);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Fira Sans, Arial, Helvetica, sans-serif; /*Se agregó el tipo de letra Fira Sans*/
+    font-size: 16px;
+}
+
+header {
+    background-color: rgb(87, 24, 59);
+    box-shadow: 3px 3px 25px 0 rgb(101, 54, 54); /*Se agregó una sombra al navbar*/
+    position: sticky;
+    top: 0;
+}
+
+.box-header {
+    display: inline-block;
+    margin: 9;
+    padding: 1%;
+    vertical-align: top;
+}
+
+.logo {
+    width: 27%;
+    height: 20px; 
+    padding: 0 0 0 1%;
+}
+
+.link-container {
+    width: 50%; /*Cambiamos el tamaño de los enlaces para que abarquen más espacio*/
+    text-align: right;
+    line-height: 30px;
+}
+
+.nav-link {
+    color: rgb(203, 203, 122);
+    font-size: 20px;
+    font-weight: bold; /*Los enlaces van en negritas*/
+}
+
+input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-width: 5px;
+    border-style: black;
+    border-color: rgb(175, 140, 46) ;
+    font-size: 1em;
+    color: #333;
+    background: #f9f9f9;
+    box-sizing: border-box;
+}
+
+optgroup{
+    border-width: 5px;
+    border-style: black;
+    border-color: rgb(175, 140, 46) ;
+    border-radius: 5px;
+}
+
+label {
+    color: #10062c;
+    margin-bottom: 5px;
+    display: block;
+}
+button {
+    width: 100%;
+    background: #5a386d;
+    color: white;
+    padding: 12px;
+    border-width: 5px;
+    border-style: black;
+    border-color: rgb(175, 140, 46) ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+pre{
+    background-color: rgb(202, 198, 137); 
+    color: rgb(43, 17, 10); 
+    border-left: solid 15px rgb(110, 3, 80);
+}
+
+.destacado:hover{
+    box-shadow: 0 8px 16px rgba(111, 0, 255, 0.4);
+}
+
+input:focus, textarea:focus {
+    outline: 3px solid #460e8f;
+    border: 3px solid #e02765;
+    cursor: pointer;
+}
+
+p:first-child {
+    color: rgb(43, 30, 13);
+}
+
+p:last-child {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+p:first-of-type{
+    color:  rgb(43, 30, 13);;
+    font-weight: bold;
+}
+
+h2:nth-of-type(2){
+    color: rgb(43, 30, 13);
+}
+
+p:nth-child(odd){
+    background: #faedc3;
+}
+
+p:nth-child(even){
+    background: #e9dff5;
+}
