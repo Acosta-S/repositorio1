@@ -1,0 +1,167 @@
+:root {
+    --color-fondo: #2c0f0f;
+    --degradado: linear-gradient(to bottom, rgb(107, 84, 192),rgb(87, 24, 59));
+    --padding-caja-contenedor: 20px;
+    --ancho-contenedor: 80%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    background: var(--color-principal, rgb(20, 2, 34));
+    box-shadow: 3px 3px 25px 0 rgb(101, 54, 54); /*Se agregó una sombra al navbar*/
+    position: sticky;
+    top: 0;
+}
+
+.texto-blanco {
+    color: rgb(255, 255, 255);
+}   
+
+.fondo-purpura {
+    background: var(--color-principal, rgb(16, 0, 29));
+}
+
+.box-header {
+    display: inline-block;
+    margin: 9;
+    padding: 1%;
+    vertical-align: top;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 27%;
+    height: 20px; 
+    padding: 0 0 0 1%;
+    align-self: flex-start;
+}
+
+.link-container {
+    width: 50%; /*Cambiamos el tamaño de los enlaces para que abarquen más espacio*/
+    text-align: right;
+    line-height: 30px;
+}
+
+.block-box{
+
+    width: 25%;
+}
+
+
+.box{
+    width: 300px;
+    height: 500px;
+    background-color: rgb(219, 213, 43);
+    border: 5px solid rgb(95, 7, 7);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-self: flex-start;
+}
+
+.box-padding {
+    padding: 15px 50px;
+}
+
+.box-margin {
+    margin: 15px;
+}
+
+.photo {
+    width: 300px;
+    height: 200px; 
+    
+}
+
+.contact-link {
+    width: 25%;
+    text-align: center;
+    line-height: 40px; /*Modificamos la altura de la línea para que los enlaces se coloquen en el centro (verticalmente).*/
+}
+
+.nav-link {
+    color: rgb(138, 11, 11); 
+    font-size: 16px;
+}
+
+.container {
+    border: 5px solid black;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+
+.colorBox {
+    width: 70%;
+    align-self: stretch;
+
+}
+
+.item {
+    background: #70ea33;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    flex-grow: 1;
+    width: 25%;
+    display: inline-block;
+}
+
+.item-1 {
+    align-self: flex-start;
+    background: rgb(41, 108, 255);
+}
+
+.item-2 {
+    flex-grow: 2;
+    align-self: flex-start;
+    background: orange;
+}
+
+.item-3 {
+    align-self: flex-start;
+    background: rgb(41, 108, 255);
+}
+
+.item-4 {
+    align-self: center;
+    background: orange;
+    flex-grow: 10;
+}
+
+.item-5 {
+    align-self: center;
+    background: rgb(41, 108, 255);
+}
+
+.item-6 {
+    align-self: center;
+    background: orange;
+}
+.item-7 {
+    align-self: flex-end;
+    background: rgb(41, 108, 255);
+}
+.item-8 {
+    align-self: flex-end;
+    background: orange;
+}
+
+.item-9 {
+    align-self: flex-end;
+    background: rgb(41, 108, 255);
+    flex-grow: 10;
+}
