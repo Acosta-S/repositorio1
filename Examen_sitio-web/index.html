@@ -1,18 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsivo</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="flex-center">Header</header>
-        <nav class="flex-center main-menu">Navigation</nav>
-        <section class="flex-center">Main Content</section>
-        <nav class="flex-center sidebar">Otro sidebar</nav>
-        <footer class="flex-center">Footer</footer>
-    </div>
-</body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Documento con formulario para registro de usuarios">
+        <meta name="author" content="Brenda Lara">
+        <meta name="keywords" content="UABCS, Form, Register">
+        <base href="https://www.ejemplo.com/" target="_blank">
+        <title>Formularios</title>
+    </head>
+    <body>
+        <a href="codigo.html">No le hagas click</a>
+
+        <form action="/submit" method="post">
+            <fieldset>
+                <legend>Información personal</legend>
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Ingresa tu correo"
+                    value="correo@correo.com"
+                    required
+                ><br><br>
+
+                <label>
+                    Descripción
+                    <textarea 
+                        required
+                        name="descripcion"
+                        rols="10"
+                        cols="50"
+                        placeholder="Ingresa tu descripción">
+                    </textarea>
+                </label>
+                <br><br>
+
+                <label for="pais">País</label>
+                <select name="pais" id="pais">
+                    <optgroup label="América">
+                        <option value="mex">México</option>
+                        <option value="usa">Estados Unidos</option>
+                    </optgroup>
+                    <option value="col">Colombia</option>
+                    <option value="arg">Argentina</option>
+                    <option value="ntd" selected>Países Bajos</option>
+                </select>
+                <br><br>
+                
+                <label for="lenguaje">Idioma</label>
+                <input minlength="5" maxlength="10" id="lenguaje" type="text" list="lenguajes">
+                <datalist id="lenguajes" name="lenguaje">
+                    <option>Español</option>
+                    <option>Inglés</option>
+                    <option>Francés</option>
+                </datalist><br><br>
+
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </body>
 </html>

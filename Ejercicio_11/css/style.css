@@ -18,6 +18,7 @@ body {
     color: rgb(203, 203, 122);
     font-size: 16px;
     font-weight: bold; /*Los enlaces van en negritas*/
+    
 }
 
 .grid-container {
@@ -27,7 +28,7 @@ body {
         "sidebar main-content"
         "formulario formulario"
         "footer footer";
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr;
     gap: 10px;
 }
 .header {
@@ -36,7 +37,8 @@ body {
     grid-area: header;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 4%;
+    width: 100%;
 }
 
 .header h1 {
@@ -58,6 +60,7 @@ body {
     grid-area: main-content;
     background-color: #a78744;
     padding: 20px;
+    width: 100%;
 }
 
 .main-content h2 {
@@ -162,8 +165,10 @@ p:nth-child(even){
 
 pre{
     background: linear-gradient(to top, rgb(155, 102, 22), rgb(202, 198, 137));
-    
     color: rgb(43, 17, 10); 
+    white-space: pre-wrap; 
+    word-wrap: break-word; /* Asegura que las palabras largas también se dividan */
+    padding: 20px;
 }
 
 @media (max-width: 480px){
@@ -180,14 +185,15 @@ pre{
 
 }
 
-@media (min-width: 481px) and (max-width: 768px){
+@media (min-width: 478px) and (max-width: 768px){
     .grid-container {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas: 
-            "header header"
-            "nav nav"
-            "main sidebar"
-            "footer footer"
+            "header"
+            "sidebar"
+            "main-content"
+            "formulario"
+            "footer"
         ;
     }
 }
