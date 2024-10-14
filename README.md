@@ -26,5 +26,9 @@ Codigos de tareas por Jose Alberto Acosta Salgado
 24. https://acosta-s.github.io/repositorio1/Examen_sitio-web/index.html
 25. [13: Examen_sitio-web-2](/Examen_sitio-web-2/index.html)
 26. https://acosta-s.github.io/repositorio1/Examen_sitio-web-2/index.html
+27. [14: Ejercicio#12](/Ejercicio_12_JS/index.html)
+28. https://acosta-s.github.io/repositorio1/Ejercicio_12_JS/index.html
+99. [99: Proyecto_Final](/Proyecto_Final/index.html)
+99. https://acosta-s.github.io/repositorio1/Proyecto_Final/index.html
 
  
