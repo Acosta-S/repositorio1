@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-yellow-100 to-yellow-700">
+
+    <!-- Barra de navegación -->
+    <nav class="bg-gradient-to-r from-indigo-900 to-black shadow sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a class="text-xl font-bold text-white" href="#">Tarjeta REMAKE</a>
+            <button class="md:hidden p-2 text-gray-500 hover:text-gray-700 focus:outline-none" id="navbar-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+            <div class="hidden md:flex space-x-6">
+                <a class="text-white hover:text-yellow-400" href="../README.md">HOME</a>
+                <a class="text-white hover:text-indigo-400" href="../Examen_sitio-web/index.html">Historia</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Sección de productos -->
+    <div class="max-w-7xl mx-auto mt-5 p-4">
+        <h1 class="text-3xl text-center font-bold mb-5">Tablero</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Producto 1 -->
+            <div class="bg-red-800 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">1</h5>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="bg-yellow-200 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">2</h5>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="bg-red-800 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">3</h5>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="bg-yellow-200 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">4</h5>
+                </div>
+            </div>
+            <!-- Producto 5 -->
+            <div class="bg-red-800 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">5</h5>
+                </div>
+            </div>
+            <!-- Producto 6 -->
+            <div class="bg-yellow-200 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">6</h5>
+                </div>
+            </div>
+            <!-- Producto 7 -->
+            <div class="bg-red-800 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">7</h5>
+                </div>
+            </div>
+            <!-- Producto 8 -->
+            <div class="bg-yellow-200 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">8</h5>
+                </div>
+            </div>
+            <!-- Producto 9 -->
+            <div class="bg-red-800 shadow-md overflow-hidden">
+                <div class="p-4">
+                    <h5 class="font-bold text-lg text-center">9</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página/Tarjeta CITY -->
+    <footer class="bg-gradient-to-r from-yellow-400 to-red-800 mt-5">
+        <div class="max-w-7xl mx-auto p-4 flex justify-evenly">
+            <div class="text-center">
+                <h5 class="text-lg font-bold">CITY</h5>
+                <img src="img/city.jpg" alt="CITY" class="w-full h-30 object-cover">
+                <p>Pretty cool photo huh? 
+                    Try to guess where it came from 
+                    you'll never guess the right
+                    answer.</p>
+            </div>
+            
+
+        </div>
+        <div class="text-center p-3 bg-gradient-to-r from-indigo-900 to-black ... text-white">
+            © 2024 Paradise Co. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Script para la funcionalidad del menú móvil
+        const toggleButton = document.getElementById('navbar-toggle');
+        const navbarMenu = document.querySelector('.md\\:flex');
+
+        toggleButton.addEventListener('click', () => {
+            navbarMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

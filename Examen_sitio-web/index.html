@@ -1,146 +1,156 @@
-<!--Recordatorio: copiar y pegar el codigo del ejercicio 11, crear una carpeta nueva incluyendo
-un nuevo index y css, copiar y pegar el codigo de la tarjeta del ejercicio 9 y modificarlo usando
-el framework de boostrap-->
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda en Línea</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Historia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="mensaje" content="Buzon de mensajes de fans">
+    <meta name="author" content="JAAS">
+    <meta name="keywords" content="UABCS, Form, Register">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
+
 <body>
+    <div class="grid-container">
+        <header class="flex-center header">
+            <div>
+                <h4 class="titulo-header">Historia</h4>
+            </div>
+            <nav>
+                <!--Enlace de la pagina creada en tailwind-->
+                <a class="nav-link" href=../Examen_sitio-web-2/index.html><u>Tarjeta</u></a>
+            </nav>
+        </header>
 
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#">Mi Tienda</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tienda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Carrito</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
+        <div class="flex-center sidebar">
+<h2>Bienvenidos al mundo del paraiso</h2>
+<p><u>Ten en cuenta que esta es una pagina de prueba.</u></p>
+<p>Por lo que no toda la informacion sera relevante</p>
         </div>
-    </nav>
+<!--La historia-->
+        <main class="flex-center main-content">
+            <article>
+                <pre>
+A long time ago in an unspecefied time period there were to spitiual locations for
+departed souls, heaven and hell, the resting places for the souls of good heart and
+the wasting grounds for the dammed ones respectivly.
 
-    <!-- Sección de productos -->
-    <div class="container mt-5">
-        <h1 class="text-center mb-5">Nuestros Productos</h1>
-        <div class="row py-4">
-            <!-- Producto 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto 1.</p>
-                        <p class="card-text">$100.00</p>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 2</h5>
-                        <p class="card-text">Descripción breve del producto 2.</p>
-                        <p class="card-text">$150.00</p>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 3</h5>
-                        <p class="card-text">Descripción breve del producto 3.</p>
-                        <p class="card-text">$200.00</p>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 4 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 4</h5>
-                        <p class="card-text">Descripción breve del producto 4.</p>
-                        <p class="card-text">$100.00</p>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 5 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 5">
-                    <div class="card-body">
-                        <h5 class="card-title">TEST 5</h5>
-                        <p class="card-text">Descripción breve del producto 5.</p>
-                        <p class="card-text">$150.00</p>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Producto 6 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Producto 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 6</h5>
-                        <p class="card-text">Descripción breve del producto 6.</p>
-                        <p class="card-text">$200.00</p>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
-                    </div>
-                </div>
-            </div>
+Until one day... they arrived... the machines of wood and flesh emanating
+the darkness of the universe arrived... for their fuel.
+
+Out of nowhere flying vessels soared the skies hitting any angel or demon that was in their
+target sight, winged creatures with yellow skulls deployed from the vessels to collect every
+soul avalible, it didint matter if it was a holy soul or a sinful one, it was all fuel and 
+nothing else.
+
+The gods of heaven and hell arrvied to see their domains being ravaged by machinery, unphased by
+the carnage the gods casted thunder and winds to swiftly dispose of the nuisance, but they never 
+accounted for one small detail, who was controlling these machines?
+
+They would find out the moment they finished destroying the army... the chains started to move..
+From the grounds of the depths of hell emerged chains to bring downs the heavens, attempting to destroy
+the holy resting place and destroying hell with it
+and there was nothing they could do as an unknown force is preventing the gods to stop it,
+angels started to fall, structures crumble in the dust, the fires of hell started to morph into goo,
+the ground was staring to level as if it's in the middle of an nuclear explosion.
+
+The gods are speachless, and in the mids of all the chaos... he arrived... the man who destroyed the skies
+and the earth, the man... who will destroy the gods.
+
+The Reaper King: Dark Nebula.
+
+A man of purple hair and suit, pale skin with red and yellow eyes, a playful look to mock his enemies.
+He appered on the back of the gods, teasing them for their failure at resistance, the gods immidiatly started
+to attack him, fast thunder, beems of energy emanating from the hands of the good of hell, winds casted by
+the god of the heavens, explosions coming from both of them, fire, blades, supernovas... nothing was working.
+
+No matter what they tried it would not work, all the Reaper King did was laugh as it was dodging attacks,
+eventually he was getting bored as the destruction was nearing a breaking point, so he executed his next move...
+
+He was going to kill the gods and use their souls to make himself more powerfull.
+
+In the middle of the fight, Dark Nebula took out a rod with a spiral like disk at the tip from his suit, he pointed
+it upwards bliding the gods, and in that moment, a black void started to form, the heavens and hell started to
+break down and it was creating an explosion that would liberate all the energy that was being exposed from the damaged
+caused from the carnage.
+
+The gods, regaining their sight discovered that Dark Nebula dissapared, they looked around them and found nothing...
+he was hiding from their backs, and in that moment he screamed...
+
+"GAME, OVER!!!"
+
+In that moment, the bodies of the gods vanished and all that was left was their souls that were quickly
+absorbed by the Reaper King to become powerfull, the god slayer maniacly laughed as screams of angels and demons
+were being silenced one by one by his army, anticipating the fallout he commanded his army to leave,
+the mission was a sucess.
+
+And after leaving with an incomprehensible amount of souls... the heaven and hell were sucked into a dark 
+void, letting out a giant explosion, all that remanied was dust and the cries of the souls of both mortals, angels
+and demons, their home and prison no longer exist.
+
+All that was left, was a death paradise.
+                </pre>
+        
+            </article>
+        </main>
+<!--Formulario-->
+        <div class="flex-center formulario">
+            <h2>Buzon de mensajes</h2>
+            <form class="flex-center" action=/submit method="post">
+                <!--Correo-->
+                    <fieldset>
+                        <legend>Información personal</legend>
+                        <label for="email">Correo</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Ingresa tu correo"
+                            value="correo@correo.com"
+                            required
+                        ><br><br>
+            <!--Mensaje-->
+                <label>Mensaje</label>
+                    <textarea 
+                        required
+                        name="mensaje"
+                        rols="50"
+                        cols="50"
+                        placeholder="Ingresa tu mensaje">
+                    </textarea>
+                <br><br>
+            <!--País-->
+                <label for="pais">País</label>
+                <select name="pais" id="pais">
+                    <optgroup>
+                        <option value="mex">México</option>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="col">Colombia</option>
+                        <option value="arg">Argentina</option>
+                        <option value="ntd" selected>Países Bajos</option>
+                    </optgroup>
+                </select>
+                <br><br>
+            
+
+            <!--Idioma-->
+                <label for="lenguaje">Idioma</label>
+                <input minlength="5" maxlength="10" id="lenguaje" type="text" list="lenguajes">
+                <datalist id="lenguajes" name="lenguaje">
+                    <option>Español</option>
+                    <option>Inglés</option>
+                    <option>Francés</option>
+                </datalist><br><br>
+            <button type="submit">Enviar</button>
+            </form>
         </div>
+
+        <footer class="flex-center footer">
+            <p>&copy; 2024 Paradise Co. Todos los derechos reservados.</p>
+        </footer>
     </div>
-
-    <!-- Pie de página -->
-    <footer class="bg-light text-center text-lg-start mt-5">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Mi Tienda</h5>
-                    <p>Aquí puedes incluir información sobre tu tienda o enlaces útiles.</p>
-                </div>
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Enlaces útiles</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="#" class="text-dark">Política de privacidad</a></li>
-                        <li><a href="#" class="text-dark">Términos y condiciones</a></li>
-                        <li><a href="#" class="text-dark">Preguntas frecuentes</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="text-center p-3 bg-dark text-white">
-            © 2024 Mi Tienda - Todos los derechos reservados.
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS y dependencias -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
