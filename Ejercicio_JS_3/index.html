@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+     <!-- Tailwind CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <textarea class="bg-black-400 shadow-md overflow-hidden w-full"></textarea>
+    </div>
+    <div class="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-3 gap-2">
+        <button id="0" class="bg-blue-500 shadow-md overflow-hidden text-white">0</button>
+        <button id="1" class="bg-blue-500 shadow-md overflow-hidden text-white">1</button>
+        <button id="2" class="bg-blue-500 shadow-md overflow-hidden text-white">2</button>
+        <button id="3" class="bg-blue-500 shadow-md overflow-hidden text-white">3</button>
+        <button id="4" class="bg-blue-500 shadow-md overflow-hidden text-white">4</button>
+        <button id="5" class="bg-blue-500 shadow-md overflow-hidden text-white">5</button>
+        <button id="6" class="bg-blue-500 shadow-md overflow-hidden text-white">6</button>
+        <button id="7" class="bg-blue-500 shadow-md overflow-hidden text-white">7</button>
+        <button id="8" class="bg-blue-500 shadow-md overflow-hidden text-white">8</button>
+        <button id="9">9</button>
+        <button id="+">+</button>
+        <button id="-">-</button>
+        <button id="*">*</button>
+        <button id="/">/</button>
+        <button id="=">=</button>
+        <button id="C">C</button>
+    </div>
+
+    <div>
+        <h1>Historial de calculos</h1>
+    </div>
+    <script>
+    let numero1 = Number.parseInt();
+    let operacion;
+    let numero2 = Number.parseInt();
+
+    function calcular (numero1, operacion, numero2){
+        if (operacion == '+'){
+            return numero1 + numero2;
+        }
+        else if (operacion == '-'){
+            return numero1 - numero2;
+        }
+        else if (operacion == '*'){
+            return numero1 * numero2;
+        }
+        else if (operacion == '/' && numero2 > 0){
+            return numero1 / numero2;
+        }else{
+        
+        }
+    };
+
+    let resultado = calcular(numero1, operacion, numero2);
+    </script>
+</body>
+</html>

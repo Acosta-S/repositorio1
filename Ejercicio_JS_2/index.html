@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="contenedorBotones">
+        <h1>Pulsa un boton para cambiar los colores</h1>
+        <button id="rojo"> Rojo </button>
+        <button id="azul"> Azul </button>
+        <button id="amarillo"> Amarillo </button>
+        <button id="restablecer"> Restablecer </button>
+    </div>
+    <script>
+        const botonRojo = document.getElementById('rojo');
+        botonRojo.addEventListener('click', function() {
+            const body = document.getElementsByTagName('body');
+            body[0].classList.toggle('color-rojo');
+            console.log(body[0]);
+        });
+        const botonAzul = document.getElementById('azul');
+        botonAzul.addEventListener('click', function() {
+            const body = document.getElementsByTagName('body');
+            body[0].classList.toggle('color-azul');
+            console.log(body[0]);
+        });
+        const botonAmarillo = document.getElementById('amarillo');
+        botonAmarillo.addEventListener('click', function() {
+            const body = document.getElementsByTagName('body');
+            body[0].classList.toggle('color-amarillo');
+            console.log(body[0]);
+        });
+        const botonR = document.getElementById('restablecer');
+        botonR.addEventListener('click', function() {
+            const body = document.getElementsByTagName('body');
+            body[0].classList.toggle('color-r');
+            console.log(body[0]);
+        });
+    </script>
+    
+
+</body>
+</html>

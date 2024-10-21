@@ -1,0 +1,49 @@
+:root {
+    --color-fondo: #f4f4f4;
+    --color-fondo-contenedor: #fff;
+}
+
+.color-rojo {
+    --color-fondo: #9b3328;
+    --color-texto: #ffffff;
+}
+
+.color-azul {
+    --color-fondo: #6575d1;
+    --color-texto: #ffffff;
+}
+
+.color-amarillo {
+    --color-fondo: #ffd95d;
+    --color-texto: #ffffff;
+}
+
+.color-r {
+    --color-fondo: #f4f4f4;
+    --color-texto: #ffffff;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+button {
+    padding: 10px 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to top, rgb(3, 2, 65), rgb(252, 252, 252));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2em;
+    transition: background-color 0.3s;
+}
+
