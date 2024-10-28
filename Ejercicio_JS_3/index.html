@@ -1,47 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-     <!-- Tailwind CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script>
-        const text= document.getElementById('textarea');
-        
-        const agregarNumero = () => {
-            const nuevoItem = document.createElement(Number);
-            nuevoItem.textContent = "0";
-
-            lista.appendChild(nuevoItem);
-        }
-    </script>
+    <title>Ejemplo Mejorado de Selectores DOM</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div>
-        <textarea id="textarea" class="text-black shadow-md overflow-hidden w-full" readonly></textarea>
+    <div class="container">
+        <h1 id="titulo">Selectores de Elementos del DOM</h1>
+        <button id="btnModo">Cambiar a Modo Oscuro</button>
+
+        <p class="parrafo">Este es un párrafo con una clase especial y estilos mejorados.</p>
+        <p>Este es otro párrafo sin clase, con estilos generales.</p>
+
+        <ul>
+            <li>Elemento de una lista</li>
+            <li>Otro elemento de una lista</li>
+        </ul>
+
+        <div class="container">
+            <p>Este párrafo está dentro de un contenedor con márgenes y estilos distintos.</p>
+        </div>
+
+        <a href="#" class="link">Enlace 1</a>
+        <a href="#" class="link">Enlace 2</a>
+
+        <img id="imagen" src="" alt="Imagen de prueba">
+
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>María</td>
+                <td>25</td>
+            </tr>
+        </table>
+
+        <form id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+            <button type="submit">Enviar</button>
+        </form>
+
     </div>
-    <div class="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-3 gap-2">
-        <button id="0" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero()">0</button>
-        <button id="1" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(1)">1</button>
-        <button id="2" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(2)">2</button>
-        <button id="3" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(3)">3</button>
-        <button id="4" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(4)">4</button>
-        <button id="5" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(5)">5</button>
-        <button id="6" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(6)">6</button>
-        <button id="7" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(7)">7</button>
-        <button id="8" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(8)">8</button>
-        <button id="9" class="bg-blue-500 shadow-md overflow-hidden text-white" onclick="agregarNumero(9)">9</button>
-        <button id="+" class="bg-blue-500 shadow-md overflow-hidden text-white">+</button>
-        <button id="-" class="bg-blue-500 shadow-md overflow-hidden text-white">-</button>
-        <button id="*" class="bg-blue-500 shadow-md overflow-hidden text-white">*</button>
-        <button id="/" class="bg-blue-500 shadow-md overflow-hidden text-white">/</button>
-        <button id="=" class="bg-blue-500 shadow-md overflow-hidden text-white">=</button>
-        <button id="C" class="bg-blue-500 shadow-md overflow-hidden text-white">C</button>
-    </div>
-    
-    <div>
-        <h1>Historial de calculos</h1>
-    </div>
+
+    <script>
+        const titulo = document.getElementById('titulo');
+        titulo.textContent = "Nuevo título";
+        //titulo.style.color = "indigo";
+
+        const parrafos = document.getElementsByClassName('parrafo');
+        for(let i = 0; i < parrafos.length; i++){
+            //parrafos[i].style.color = "red";
+        }
+        
+        const enlaces = document.getElementsByTagName('a');
+        for(let i = 0; i < enlaces.length; i++){
+            enlaces[i].style.textDecoration = "none";
+        }
+
+        const primerLi = document.querySelector('ul li');
+        primerLi.classList.add('highlight');
+
+        const celdas = document.querySelectorAll('td');
+        celdas.forEach(celda => {
+            celda.style.background = "#ecf0f1";
+        })
+
+        const imagen = document.getElementById('imagen');
+        imagen.src = 'img/logo.png';
+
+        const botonModo = document.getElementById('btnModo');
+
+        botonModo.addEventListener('click', function() {
+            const body = document.getElementsByTagName('body');
+            body[0].classList.toggle('modo-oscuro');
+            console.log(body[0]);
+        });
+    </script>
 </body>
+
 </html>

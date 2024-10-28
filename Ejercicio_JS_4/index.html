@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 50px;
+            background-color: #f4f4f4;
+            margin: 5% auto;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #a41414;
+            color: white;
+        }
+        
+        .buttonAgregar{
+            padding: 10px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .lista .lista-tareas li{
+            border-bottom: 1px solid #B6B6B6;
+            display: block;
+	        padding: 20px 0;
+	        text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div >
+    <h1>Lista de Tareas</h1>
+    <ul class="lista" id="lista-tareas">
+    </ul>
+	<input type="text" id='userInput'>
+    <button class="buttonAgregar" onclick="agregarElemento()" value='Change Text'>Agregar nuevo elemento</button>
+    </div>
+    <script rel="script" src="js/index.js"></script>
+</body>
+</html>
