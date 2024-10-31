@@ -4,89 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo Mejorado de Selectores DOM</title>
+    <title>CRUD con The Cat API</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1 id="titulo">Selectores de Elementos del DOM</h1>
-        <button id="btnModo">Cambiar a Modo Oscuro</button>
+    <h1>Galería de Razas de Gatos</h1>
+    <div id="catGrid"></div>
 
-        <p class="parrafo">Este es un párrafo con una clase especial y estilos mejorados.</p>
-        <p>Este es otro párrafo sin clase, con estilos generales.</p>
-
-        <ul>
-            <li>Elemento de una lista</li>
-            <li>Otro elemento de una lista</li>
-        </ul>
-
-        <div class="container">
-            <p>Este párrafo está dentro de un contenedor con márgenes y estilos distintos.</p>
-        </div>
-
-        <a href="#" class="link">Enlace 1</a>
-        <a href="#" class="link">Enlace 2</a>
-
-        <img id="imagen" src="" alt="Imagen de prueba">
-
-        <table>
-            <tr>
-                <th>Nombre</th>
-                <th>Edad</th>
-            </tr>
-            <tr>
-                <td>Juan</td>
-                <td>30</td>
-            </tr>
-            <tr>
-                <td>María</td>
-                <td>25</td>
-            </tr>
-        </table>
-
-        <form id="formulario">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
-            <button type="submit">Enviar</button>
-        </form>
-
+    <div class="pagination">
+        <button id="prevPage" disabled>Anterior</button>
+        <button id="nextPage">Siguiente</button>
     </div>
 
     <script>
-        const titulo = document.getElementById('titulo');
-        titulo.textContent = "Nuevo título";
-        //titulo.style.color = "indigo";
-
-        const parrafos = document.getElementsByClassName('parrafo');
-        for(let i = 0; i < parrafos.length; i++){
-            //parrafos[i].style.color = "red";
-        }
-        
-        const enlaces = document.getElementsByTagName('a');
-        for(let i = 0; i < enlaces.length; i++){
-            enlaces[i].style.textDecoration = "none";
+        const apiUrl = "https://api.thecatapi.com/v1/breeds";
+        const catGrid = document.getElementById('catGrid');
+        let currentPage = 1;
+        const limit = 1;
+        const options = {
+            headers: {
+                'x-api-key': 'live_9xAXeOySuZF12pqsDZzqNZy3lMzRgjHdcdFDViMWLt5kIahrWeNrkjQZ5QwzVkWA'
+            }
         }
 
-        const primerLi = document.querySelector('ul li');
-        primerLi.classList.add('highlight');
+        window.addEventListener('DOMContentLoaded', () => getBreeds(currentPage));
 
-        const celdas = document.querySelectorAll('td');
-        celdas.forEach(celda => {
-            celda.style.background = "#ecf0f1";
+        async function getBreeds(page){
+            try {
+                const response = await fetch(`${apiUrl}?limit=${limit}&page=${page - 1}`, options); 
+                if(!response.ok){
+                    throw new Error("Error " + response.status)
+                }
+                const breeds = await response.json();
+                
+                showBreeds(breeds);
+                updateButtons(breeds.length);
+            }catch (error) {
+                console.error(error);
+                //alert (`${error.message}`);
+            }
+        }
+
+        function showBreeds(breeds){
+            catGrid.innerHTML = ''; // Limpiar cuadrícula
+            breeds.forEach(breed => {
+                const catCard = document.createElement('div');
+                catCard.classList.add('cat-card');
+                catCard.innerHTML = `
+                    <img src="${breed.image?.url || 'https://via.placeholder.com/150'}" alt="${breed.name}">
+                    <h3>${breed.name}</h3>
+                    <p>${breed.temperament || 'Temperamento no disponible'}</p>
+                `;
+                catGrid.appendChild(catCard);
+            });
+        }
+
+        function updateButtons(breedCount){
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = breedCount < limit;
+        }
+
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if(currentPage > 1){
+                currentPage--;
+                getBreeds(currentPage);
+            }
         })
 
-        const imagen = document.getElementById('imagen');
-        imagen.src = 'img/logo.png';
+        document.getElementById('nextPage').addEventListener('click', () => {
+            currentPage++;
+            getBreeds(currentPage);
+        })
 
-        const botonModo = document.getElementById('btnModo');
-
-        botonModo.addEventListener('click', function() {
-            const body = document.getElementsByTagName('body');
-            body[0].classList.toggle('modo-oscuro');
-            console.log(body[0]);
-        });
     </script>
 </body>
-
-</html>

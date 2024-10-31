@@ -3,10 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Tarjeta Gato</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    
+    <div id="tarjeta-gato"></div>
 </body>
+
+<script>
+    const apiUrl = "https://api.thecatapi.com/v1/breeds";
+    const tarjetaGato = document.getElementById('tarjeta-gato');
+    let currentPage = 1;
+    const limit = 1;
+    const options = {
+            headers: {
+                'x-api-key': 'live_9xAXeOySuZF12pqsDZzqNZy3lMzRgjHdcdFDViMWLt5kIahrWeNrkjQZ5QwzVkWA'
+            }
+        }
+    window.addEventListener('DOMContentLoaded', () => getBreeds(currentPage));
+
+    async function getBreeds(page){
+        try {
+            const response = await fetch(`${apiUrl}?limit=${limit}&page=${page - 1}`, options); 
+            if(!response.ok){
+                throw new Error("Error " + response.status)
+            }
+            const breeds = await response.json();
+            
+            showBreeds(breeds);
+        }catch (error) {
+            console.error(error);
+            //alert (`${error.message}`);
+        }
+    }
+
+    function showBreeds(breeds){
+        tarjetaGato.innerHTML = ''; // Limpiar cuadrícula
+            breeds.forEach(breed => {
+                const tarjeta_gato = document.createElement('div');
+                tarjeta_gato.classList.add('tarjeta-gato');
+                tarjeta_gato.innerHTML = `
+                    <img src="${breed.image?.url || 'https://via.placeholder.com/150'}" alt="${breed.name}">
+                    <h3>${breed.name}</h3>
+                    <p><b>Temperamento: </b>${breed.temperament || 'Temperamento no disponible'}</p>
+                    <p><b>Años de vida: </b>${breed.life_span || 'Años de vida no disponible'}</p>
+                    <p><b>Descripcion: </b>${breed.description || 'Descripcion no disponible'}</p>
+                    <p><b>Origen: </b>${breed.origin || 'Origen no disponible'}</p>
+                    <p><b>Amigable con niños: </b>${breed.child_friendly || 'amistad no disponible'}</p>
+                    <p><b>Amigable con perros: </b>${breed.dog_friendly || 'amistad no disponible'}</p>
+                    <p><b>Enlace a Wikipedia: </b><u href="#">${breed.wikipedia_url || 'Link no disponible'}</u></p>
+                `;
+                tarjetaGato.appendChild(tarjeta_gato);
+            });
+        }
+</script>
+
 </html>
