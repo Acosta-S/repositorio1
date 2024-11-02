@@ -34,6 +34,8 @@ Codigos de tareas por Jose Alberto Acosta Salgado
 32. https://acosta-s.github.io/repositorio1/Ejercicio_JS_4/index.html
 33. [17: Tarjeta_de_gatos](/Ejercicio_JS_5/index.html)
 34. https://acosta-s.github.io/repositorio1/Ejercicio_JS_5/index.html
+35. [18: Modeulo_de_gatos](/Ejercicio_JS_6/index.html)
+36. https://acosta-s.github.io/repositorio1/Ejercicio_JS_6/index.html
 99. [99: Proyecto_Final](/Proyecto_Final/index.html)
 99. https://acosta-s.github.io/repositorio1/Proyecto_Final/index.html
 
