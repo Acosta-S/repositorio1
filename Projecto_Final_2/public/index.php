@@ -1,48 +1,32 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RED UABCS</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-</head>
+$request = $_SERVER['REQUEST_URI'];
 
-<body>
-    <div class="grid-container">
-        <header class="header">
-            <img class="logo" src="img/uabcs.png">
-            <nav>
-                <a class="navigation-link" href="#">RED UABCS</a>
-                <a href="https://www.uabcs.mx">UABCS</a>
-                <a href="https://siia-web.uabcs.mx">SIIA</a>
-                <a class="navigation-link" href="#">Iniciar Sesion</a>
-            </nav>
-        </header>
+$request = strtok($request, '?');
 
-        <div class="flex-center sidebar">
-<h2>Bienvenidos al mundo del paraiso</h2>
-<p><u>Ten en cuenta que esta es una pagina de prueba.</u></p>
-<p>Por lo que no toda la informacion sera relevante</p>
-        </div>
-<!--La historia-->
-        <main class="flex-center main-content">
-<div class="lista-tareas">
-    <div class="tarea">
-    <h1>Tarea</h1>
-    </div>
-    <div class="tarea">
-    <h1>Tarea</h1>
-    </div>
-</div>
-        </main>
+switch($request){
+    case '/':
+        require_once __DIR__.'/../src/views/public/welcome.php';
+        break;
+    case '/carreras':
+        require_once __DIR__.'/../src/views/public/careers/details.php';
+        break;
+    case '/careers':
+        require_once __DIR__.'/../src/views/admin/careers/index.php';
+        break;
+    case '/careers/form':
+        require_once __DIR__.'/../src/views/admin/careers/form.php';
+        break;
+    case '/login':
+        require_once __DIR__.'/login.php';
+        break;
+    case '/logout':
+        require_once __DIR__.'/../src/controllers/LogoutController.php';
+        break;
+    default:
+        http_response_code(404);
+        //Hacer una vista de 404
+        break;
 
-        <footer class="flex-center footer">
-            <p>&copy; 2024 Paradise Co. Todos los derechos reservados.</p>
-        </footer>
-    </div>
-    <script rel="script" src="js/index.js"></script>
-</body>
-    
-</html>
+}
+
