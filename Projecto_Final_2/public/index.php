@@ -8,14 +8,14 @@ switch($request){
     case '/':
         require_once __DIR__.'/../src/views/public/welcome.php';
         break;
-    case '/carreras':
-        require_once __DIR__.'/../src/views/public/careers/details.php';
+    case '/tareas':
+        require_once __DIR__.'/../src/views/public/tareas/details.php';
         break;
-    case '/careers':
-        require_once __DIR__.'/../src/views/admin/careers/index.php';
+    case '/tareas-admin':
+        require_once __DIR__.'/../src/views/admin/tareas/index.php';
         break;
-    case '/careers/form':
-        require_once __DIR__.'/../src/views/admin/careers/form.php';
+    case '/tareas/form':
+        require_once __DIR__.'/../src/views/admin/tareas/form.php';
         break;
     case '/login':
         require_once __DIR__.'/login.php';

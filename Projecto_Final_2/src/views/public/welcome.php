@@ -4,11 +4,11 @@
     ?>
 
 <div class="flex-center sidebar">
-<h2>Bienvenidos al mundo del paraiso</h2>
-<p><u>Ten en cuenta que esta es una pagina de prueba.</u></p>
-<p>Por lo que no toda la informacion sera relevante</p>
+<h2>Bienvenidos la RED UABCS</h2>
+<p><u>Pulse el boton de "Iniciar Sesion".</u></p>
+<p>Para agregar una tarea nueva</p>
         </div>
-<!--La historia-->
+<!--Lista de tareas-->
         <main class="flex-center main-content">
 <div class="lista-tareas">
     <div class="tarea">
