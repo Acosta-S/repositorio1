@@ -4,13 +4,13 @@
     require __DIR__.'/../../../controllers/ControladorTareas.php';
     
     $title = 'Añadir';
-    $career = null;
+    $tarea = null;
     $route = SRC_URL.'/controllers/ControladorTareas.php';
 
     if(isset($_GET['id'])){
         $title = 'Editar';
         $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
-        $career = show($id);
+        $tarea = show($id);
         $route.="?id=$id";
     }
 ?>
@@ -18,11 +18,16 @@
 <div class="form-container">
         <h1><?=$title?> Tarea</h1>
         <form action="<?=$route?>" method="POST" enctype="multipart/form-data">
-        carrera, semestre, nombre, fecha
             <!-- Carrera -->
             <div class="form-group">
                 <label for="carrera">Nombre de la Carrera</label>
-                <input type="text" id="carrera" name="carrera" placeholder="Ingrese el nombre de la carrera" value="<?=$tarea['name'] ?? ''?>" required>
+                <input type="text" id="carrera" name="carrera" placeholder="Ingrese el nombre de la carrera" value="<?=$tarea['carrera'] ?? ''?>" required>
+            </div>
+
+            <!-- Materia -->
+            <div class="form-group">
+            <label for="materia">Nombre de la Materia</label>
+            <input type="text" id="materia" name="materia" placeholder="Ingrese el nombre de la materia" value="<?=$tarea['materia'] ?? ''?>" required>
             </div>
 
             <!-- Semestre -->
@@ -51,8 +56,7 @@
             <?php 
             if(isset($_SESSION['success'])): 
             ?>
-            
-                <p class="success"><?php echo htmlspecialchars($_SESSION['success'])?></p>
+                <?php echo htmlspecialchars($_SESSION['success'])?>
             <?php 
             $_SESSION['success'] = '';
             endif;

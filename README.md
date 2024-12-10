@@ -36,7 +36,8 @@ Codigos de tareas por Jose Alberto Acosta Salgado
 34. https://acosta-s.github.io/repositorio1/Ejercicio_JS_5/index.html
 35. [18: Modeulo_de_gatos](/Ejercicio_JS_6/index.html)
 36. https://acosta-s.github.io/repositorio1/Ejercicio_JS_6/index.html
-99. [99: Proyecto_Final](/Proyecto_Final/index.html)
-99. https://acosta-s.github.io/repositorio1/Proyecto_Final/index.html
+99. [99: Proyecto_Final](/Proyecto_Final_2/src/views/public/welcome.php)
+99. https://acosta-s.github.io/repositorio1/Proyecto_Final_2/src/views/public/welcome.php
+    //En caso de no funcionar el projecto final,borre el archivo .htaccess. 
 
  

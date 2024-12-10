@@ -4,7 +4,7 @@
 
 include_once  __DIR__ .'/../../layouts/header.php';
 
-$career = getDatosTarea();
+$tarea = getDatosTarea();
 
 ?>
 

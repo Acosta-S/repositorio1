@@ -32,11 +32,9 @@ function index()
 
     $pdo = getPDO(); // Obtiene la conexión PDO.
 
-
-
     try {
 
-        $sql = "SELECT id, carrera, semestre, nombre, fecha FROM tareas"; // Consulta SQL para obtener las tareas.
+        $sql = "SELECT id, carrera, materia, semestre, nombre, fecha FROM tareas"; // Consulta SQL para obtener las tareas.
 
         $stmt = $pdo->query($sql);
 
@@ -56,7 +54,7 @@ function index()
 
 
 
-// Muestra los detalles de una carrera específica.
+// Muestra los detalles de una tarea específica.
 
 function show($id) 
 
@@ -123,8 +121,7 @@ function store() {
 
     try {
 
-        $sql = "INSERT INTO tareas (carrera, semestre, nombre, fecha) VALUES (:carrera, :semestre, :nombre, :fecha)";
-                                                                                
+        $sql = "INSERT INTO tareas (carrera, materia, semestre, nombre, fecha) VALUES (:carrera, :materia, :semestre, :nombre, :fecha)";
 
         $stmt = $pdo->prepare($sql); // Prepara la consulta SQL.
 
@@ -133,6 +130,8 @@ function store() {
             // Datos del formulario.
 
             'carrera' => $_POST['carrera'],
+
+            'materia' => $_POST['materia'],
 
             'semestre' => $_POST['semestre'],
 
@@ -177,8 +176,10 @@ function update($id) {
     try {
 
         $sql = "UPDATE tareas SET 
-
+                    
                     carrera = :carrera, 
+
+                    materia = :materia,
 
                     semestre = :semestre, 
 
@@ -195,6 +196,8 @@ function update($id) {
             'id' => $id, 
 
             'carrera' => $_POST['carrera'],
+
+            'materia' => $_POST['materia'],
 
             'semestre' => $_POST['semestre'],
 
@@ -225,3 +228,4 @@ function update($id) {
     
 
 }
+

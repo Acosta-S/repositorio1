@@ -10,7 +10,7 @@ define('ASSETS_URL', $config['assets_url']);
 
 define('SRC_URL', $config['src_url']);
 
-define('CAREERS_CACHE_FILE',  __DIR__ .'/../cache/careers.json');
+define('TAREAS_CACHE_FILE',  __DIR__ .'/../cache/tareas.json');
 
 
 
@@ -32,11 +32,11 @@ function cache_tareas()
 
     try {
 
-        $sql = "SELECT nombre FROM tareas";
+        $sql = "SELECT carrera, materia, semestre, nombre, fecha FROM tareas";
 
         $stmt = $pdo->query($sql);
 
-        $careers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $tareas = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         //Si no existe, se crea el directorio
 
@@ -50,7 +50,7 @@ function cache_tareas()
 
         //Se convierte a JSON y se agrega al archivo
 
-        file_put_contents(CAREERS_CACHE_FILE, json_encode($careers));
+        file_put_contents(TAREAS_CACHE_FILE, json_encode($tareas));
 
     } catch (PDOException $e) {
 
@@ -104,7 +104,7 @@ function getTareas()
 
     try{
 
-        $sql = "SELECT carrera, semestre, nombre, fecha FROM tareas";
+        $sql = "SELECT carrera, materia, semestre, nombre, fecha FROM tareas";
 
         $stmt = $pdo->query($sql);
 
