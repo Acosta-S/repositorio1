@@ -1,5 +1,5 @@
 <?php
-define('URL', '/repositorio1/Projecto_Final_2/public');
+define('URL', '/repositorio1/Proyecto_Final_2/public');
 
 $request = $_SERVER['REQUEST_URI'];
 
